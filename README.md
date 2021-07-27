@@ -1,3 +1,4 @@
+
 # java-fundamentals
 
 
@@ -30,3 +31,4 @@
 **Finished Tasks :**<br>
 1-**Analyzing Weather Data:**
 Use the October Seattle weather data . Iterate through all of the data to find the min and max values.
+=======

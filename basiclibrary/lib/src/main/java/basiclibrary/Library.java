@@ -52,5 +52,26 @@ public class Library {
         return sum/array.length;
     }
 
+    public static boolean containsDuplicates(int[] arr){
+        boolean cond;
+        Set<Integer> setArr = Arrays.stream(arr).boxed().collect(Collectors.toSet());
+        if(setArr.size()==arr.length){
+            cond=false;
+        }else{
+            cond=true;
+        }
+
+        return cond;
+    }
+
+    public static int[] rolls(int n){
+        int[] newArr=new int[n];
+        for (int i = 0; i <n ; i++) {
+            int r = (int) (Math.random() * (6 - 1)) + 1;
+            newArr[i]=r;
+//            System.out.println(newArr[i]);
+        }
+        return newArr;
+    }
 
 }
