@@ -1,5 +1,4 @@
 
-
 # java-fundamentals
 
 
@@ -26,3 +25,10 @@
 
 4- **Lowest weekly Month Temperatures average temperatures for Seattle:** calculate the average value for each week and return the array with the lowest average.
 
+<hr>
+
+### lab-03 : Maps and File I/O<br>
+**Finished Tasks :**<br>
+1-**Analyzing Weather Data:**
+Use the October Seattle weather data . Iterate through all of the data to find the min and max values.
+=======
