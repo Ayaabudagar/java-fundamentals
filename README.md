@@ -23,3 +23,10 @@
 3-**Calculating Averages:** The written method called arraysAvarege accepts an array of integers and calculates and <br>returns the average of all the values in the array.<br>
 
 4- **Lowest weekly Month Temperatures average temperatures for Seattle:** calculate the average value for each week and return the array with the lowest average.
+
+<hr>
+
+### lab-03 : Maps and File I/O<br>
+**Finished Tasks :**<br>
+1-**Analyzing Weather Data:**
+Use the October Seattle weather data . Iterate through all of the data to find the min and max values.
