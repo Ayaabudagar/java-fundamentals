@@ -1,57 +1,41 @@
-
 package basics;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
-public class App{
-    public static String pluralize(String string, int count){
-        if (count == 1){
-            return string;
-        }else{
-            return string + "s";
+public class App {
+
+    public static String pluralize(String name,int number){
+        String result;
+        if(number==0 || number > 1  ){
+            result= name+"s";
+        }else {
+            result = name;
         }
+        return result;
     }
+    public static void flipNHeads(int n){
 
-
-    public static void main(String[] args){
-        int dogCount = 1;
-        System.out.println("I own " + dogCount + " " + pluralize("dog", dogCount) + ".");
-
-        int catCount = 2;
-        System.out.println("I own " + catCount + " " + pluralize("cat", catCount) + ".");
-
-        int turtleCount = 0;
-        System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
-        flipNHeads(2);
-        clock();
-    }
-
-    public static void flipNHeads(int headRow){
-        int flipNum=0, headNum=0;
-        double coins;
-        Random randomNum = new Random();
-
-        while (headNum!=headRow){
-
-            coins = randomNum.nextDouble();
-
-            if(coins>=0.5){
+        int flips = 0;
+        int headsNumber = 0;
+        while (headsNumber != n){
+            flips++;
+            Random random = new Random();
+            double randomNumber = random.nextDouble();
+            if (randomNumber  >= 0.5){
                 System.out.println("heads");
-                headNum=headNum+1;
-                flipNum=flipNum+1;
+                headsNumber = headsNumber + 1;
             }else {
-                System.out.println("tails");
-                headNum=0;
-                flipNum=flipNum+1;
+                System.out.println("tails ");
+                headsNumber = 0;
+
             }
+
         }
-        System.out.println("It took " +flipNum +" flips to flip "+ headNum+ " head in a row.");
+        System.out.println("It took " + flips + " flips to flip " + headsNumber + " heads in a row .");
     }
-
     public static void clock(){
-
         while (true){
 
             LocalDateTime now = LocalDateTime.now();
@@ -69,5 +53,26 @@ public class App{
         }
 
     }
+
+
+
+    public static void main(String[] args){
+
+        int dogCount = 1;
+        System.out.println("I own " + dogCount + " " + pluralize("dog", dogCount) + ".");
+
+        int catCount = 2;
+        System.out.println("I own " + catCount + " " + pluralize("cat", catCount) + ".");
+
+        int turtleCount = 0;
+        System.out.println("I own " + turtleCount + " " + pluralize("turtle", turtleCount) + ".");
+        flipNHeads(1);
+
+                clock();
+
 }
+}
+
+
+
 
