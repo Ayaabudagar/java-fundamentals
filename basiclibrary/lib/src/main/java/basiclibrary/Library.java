@@ -1,25 +1,17 @@
 package basiclibrary;
 
-import com.google.common.collect.Sets;
-
 import java.util.*;
-import java.util.stream.Collectors;
-
-
 
 public class Library {
+    public boolean someLibraryMethod() {
+        return true;
+    }
+    public static void main(String[] args){
 
-    public static void main(String[] args) {
-
-
-        for (int i = 0; i < rolls(4).length; i++) {
-            System.out.println(rolls(4)[i]);
-        }
-
-        int[] array={1,3,4,5,6};
-        System.out.println(containsDuplicates(array));
-
-        System.out.println(arraysAvarege(array));
+        System.out.println( roll(5));
+        int[] array = {1,2,3,4,6,1,8};
+        System.out.println( containsDuplicates(array));
+        System.out.println(  averagesCalculating(array));
 
         int[][] weeklyMonthTemperatures = {
                 {66, 64, 58, 65, 71, 57, 60},
@@ -27,51 +19,58 @@ public class Library {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-        lowestAvg(weeklyMonthTemperatures);
+        nestedArray(weeklyMonthTemperatures);
+
+
+    }
+    public static ArrayList roll(int n){
+        ArrayList<Integer> resultArray = new ArrayList<Integer>();
+        int min = 1;
+        int max = 6;
+        for (int i = 0; i < n; i++) {
+            int random = (int) (Math.random()* (max - min)) + 1;
+            resultArray.add(random);
+        }
+        return resultArray;
     }
 
+    public static boolean containsDuplicates(int[] duplicateArr) {
 
-    public static void lowestAvg(int[][] arr){
-        ArrayList<Double> finalArr = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            double sum=0;
-            for (int j = 0; j < arr[i].length; j++) {
-                sum=sum+arr[i][j];
+        for (int i = 0; i < duplicateArr.length; i++) {
+            for (int j = 0; j < duplicateArr.length; j++) {
+                if (i != j) {
+                    if (duplicateArr[i] == duplicateArr[j]) {
+
+                        return true;
+                    }
+                }
             }
-            finalArr.add(sum/arr[i].length);
         }
-//
-        System.out.println(Collections.min(finalArr));
+
+        return false;
     }
 
-    public static float arraysAvarege(int[] array){
-        float sum=0;
+    public static double averagesCalculating(int[] array){
+        int sum = 0;
+        double averag = 0;
+        for (int j : array) {
+            sum += j;
+        }
+        averag = (double)sum / array.length;
+        return averag;
+    }
+    public static int[] nestedArray (int[][] array ){
+        int [] newArray= array[0];
         for (int i = 0; i <array.length ; i++) {
-            sum=sum+array[i];
+            if(averagesCalculating(array[i])<averagesCalculating (array[i])){
+                newArray=array[i];
+            }
         }
-        return sum/array.length;
+        System.out.println(Arrays.toString(newArray));
+        return newArray;
     }
-
-    public static boolean containsDuplicates(int[] arr){
-        boolean cond;
-        Set<Integer> setArr = Arrays.stream(arr).boxed().collect(Collectors.toSet());
-        if(setArr.size()==arr.length){
-            cond=false;
-        }else{
-            cond=true;
-        }
-
-        return cond;
-    }
-
-    public static int[] rolls(int n){
-        int[] newArr=new int[n];
-        for (int i = 0; i <n ; i++) {
-            int r = (int) (Math.random() * (6 - 1)) + 1;
-            newArr[i]=r;
-//            System.out.println(newArr[i]);
-        }
-        return newArr;
-    }
-
 }
+
+
+
+
