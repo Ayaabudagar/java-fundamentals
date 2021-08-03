@@ -31,4 +31,15 @@
 **Finished Tasks :**<br>
 1-**Analyzing Weather Data:**
 Use the October Seattle weather data . Iterate through all of the data to find the min and max values.
+
+
+### lab-06 : Composition and Inheritance, Part 1<br>
+**Finished Tasks :**<br>
+1-**Add a Review for Restaurants :**
+Create a class to represent a Restaurant. Each Restaurant should have a name, a number of stars betweeen 0 and 5, and a price category
+2-Create a class to represent a Review. Each Review should have a body, an author, and a number of stars.
+3-A Review should be about a single Restaurant. Choose an implementation for this, and implement it. 
+4-Add an instance method addReview to your Restaurant class. This method should take in a Review instance, and associate that review with this Restaurant
+5-When you associate a review with a restaurant, that restaurant’s star rating should change. Ensure that your addReview method updates the Restaurant star rating appropriately
+<hr>
 =======
