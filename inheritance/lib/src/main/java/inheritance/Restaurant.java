@@ -1,15 +1,16 @@
 package inheritance;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Restaurant{
-    private String name;
+public class Restaurant extends Review {
+    public String name;
 
-    private double starsNum;
-    private double priceCategory;
+
+    public double starsNum;
+    public double priceCategory;
     private ArrayList<Review> reviews= new ArrayList<Review>();
     private double counter=0;
-    public Restaurant(String name, double priceCategory ){
+    public Restaurant(String name, int category, double priceCategory){
+        super(name);
         this.name=name;
         this.priceCategory=priceCategory;
     }
@@ -56,6 +57,7 @@ public class Restaurant{
                 ", reviews=" + reviews
                 ;
     }
+
 
 
 }

@@ -2,33 +2,20 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Theater {
+public class Theater extends Review {
     private String name;
-    private double starsNum;
-    private double counter=0;
     private ArrayList<String> reviews = new ArrayList<String>();
-    private ArrayList<String> movies=new ArrayList<String>();
-    public Theater(String name , String movies){
-        this.name= name;
-        this.movies.add(movies);
-    }
-    public void addReview(String author  , String body , double starsNum ){
-        String newRevew="";
-        Review newReview = new Review(author  , body , starsNum);
-        newRevew= newReview + "";
-        this.reviews.add(newRevew);
-        this.counter+= newReview.getStars();
-        this.starsNum= this.counter/ this.reviews.size();
-    }
-    public  void addReview(String author  ,String body ,double starsNum,String movieName){
+    private ArrayList<String> movies= new ArrayList<String>();
+    public Theater(String haneen, String name){
+        super(name);
 
-        Review newReview = new Review (author  , body , starsNum , movieName);
-        String movieReview = newReview+newReview.getMovieName();
-        this.reviews.add(movieReview);
-        this.counter = this.counter+newReview.getStars();
-        this.starsNum=this.counter/this.reviews.size();
 
     }
+
+    public Theater(String grand) {
+        super(grand);
+    }
+
 
     public String getName() {
         return name;
@@ -43,6 +30,20 @@ public class Theater {
 
     public void removeMovie(String name) {
         this.movies.remove(name);
+    }
+    public ArrayList<String> getReview() {
+        return reviews;
+    }
+
+    public void setReview(ArrayList<Review> theaterReview) {
+        reviews = reviews;
+    }
+    public ArrayList<String> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(ArrayList<String> movies) {
+        this.movies = movies;
     }
 
     @Override

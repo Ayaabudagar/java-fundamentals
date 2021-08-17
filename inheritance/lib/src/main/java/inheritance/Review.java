@@ -1,7 +1,10 @@
 package inheritance;
 public class Review{
-    private String author;
-    private String body;
+
+    public String author;
+    public String name;
+    public String body;
+
     double starsNum ;
     private String movieName;
     public Review( String author ,  String body , double starsNum){
@@ -17,6 +20,12 @@ public class Review{
         this.body=body;
 
     }
+
+    public Review(String name) {
+        this.name=name;
+    }
+
+
     public double getStars() {
         return starsNum;
     }
@@ -70,5 +79,8 @@ public class Review{
                 ", body='" + body + '\'' +
                 ", stars=" + starsNum +
                 " ";
+    }
+
+    public void addReview(String rana, String fantastic_movie, int i, String moon) {
     }
 }
