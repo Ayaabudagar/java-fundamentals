@@ -11,4 +11,91 @@ class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
-}
+
+
+        // This test to test the Restaurant constructor.
+        @Test public void testRestaurantConstructor(){
+            Restaurant res = new Restaurant("Res1",2,4);
+            assertEquals("name should be the same","Res1",res.name);
+            assertEquals(2,res.starsNum,0.0);
+            assertEquals(4,res.priceCategory,0.0);
+
+
+        }
+
+        // This test to test the Review constructor.
+        @Test public void testReviewConstructor(){
+            Review rev = new Review("delicious and nice plate","noor",5);
+            assertEquals("body should be the same","delicious and nice plate",rev.body);
+            assertEquals("author should be the same","noor",rev.author);
+            assertEquals(5,rev.starsNum,0.0);
+
+        }
+
+        // This test to test the Shop constructor.
+        @Test public void testShopConstructor() {
+            Shop shop = new Shop("KFC", "so yummy", 3);
+            assertEquals("KFC", shop.getName());
+            assertEquals("so yummy", shop.getDescription());
+            assertEquals(3, shop.getNumberOfDollarSigns());
+        }
+
+        // This test to test the Theater constructor.
+        @Test public void testTheaterConstructor(){
+            Theater theater =new Theater("Grand");
+            assertEquals("Grand",theater.getName());
+        }
+        // This test to test toString method  for Review.
+        @Test public void testToStingReview(){
+            Review rev = new Review("delicious and nice plate","noor",5);
+            assertEquals("Review{body='delicious and nice plate', author='noor', numberOfStars=5}",rev.toString());
+        }
+
+        // This test to test toString method  for Restaurant.
+        @Test public void testToStringRestaurant(){
+            Restaurant res = new Restaurant("Res1",2,4);
+            System.out.println(res);
+            assertEquals("Restaurant{Restaurant Name :Res1',And its Rate is 2.0, priceCategory is 4, Reviews[]}",res.toString());
+
+        }
+
+        // This test to test toString method  for Theater.
+        @Test public void testTheaterToString(){
+            Theater theater =new Theater("Grand");
+            assertEquals("Theater{name='Grand', movies=[], TheaterReview=[]}",theater.toString());
+        }
+
+        // This test to test toString method  for Shop.
+        @Test public void testShopToString(){
+            Shop shop = new Shop("KFC", "so yummy", 3);
+            assertEquals("Shop{name='KFC', description='so yummy', numberOfDollarSign=3, shopReview=[]}",shop.toString());
+        }
+
+
+
+        //This test to test the addMovie method in Theater class if it works properly .
+        @Test public void testAddMovie(){
+            Theater theater =new Theater("Grand");
+            theater.addMovie("ClassicMovie");
+            assertEquals("[ClassicMovie]",theater.getMovies().toString());
+        }
+
+
+        //This test to test the removeMovie method in Theater class if it works properly .
+        @Test public void testRemoveMovie(){
+            Theater theater =new Theater("Grand");
+            theater.addMovie("Classic Movie");
+            theater.addMovie("Action Movie");
+            theater.addMovie("horror Movie");
+            theater.removeMovie("Action Movie");
+            assertEquals("[Classic Movie, horror Movie]",theater.getMovies().toString());
+        }
+
+
+
+
+
+
+
+    }
+

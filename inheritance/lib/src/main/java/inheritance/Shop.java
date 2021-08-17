@@ -2,7 +2,7 @@ package inheritance;
 
 import java.util.ArrayList;
 
-public class Shop{
+public class Shop extends Review {
     private String name;
     private String description;
     private int dollarSignsNum;
@@ -10,6 +10,7 @@ public class Shop{
     private double counter=0;
     private ArrayList<Review> reviews= new ArrayList<Review>();
     public Shop(String name , String description , int dollarSignsNum) {
+        super(name);
         this.name=name;
         this.description=description;
         this.dollarSignsNum=dollarSignsNum;
@@ -44,6 +45,13 @@ public class Shop{
 
     public void setNumberOfDollarSigns(int dollarSignsNum) {
         this.dollarSignsNum = dollarSignsNum;
+    }
+    public ArrayList<Review> getReview() {
+        return reviews;
+    }
+
+    public void setReview(ArrayList<Review> shoprReview) {
+        reviews = reviews;
     }
     @Override
     public String toString() {
