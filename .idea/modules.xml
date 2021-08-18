@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basiclibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/basiclibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/basiclibrary.lib.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/basiclibrary.lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/basiclibrary.lib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/basiclibrary.lib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/basiclibrary.lib.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/basiclibrary.lib.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/basics.iml" filepath="$PROJECT_DIR$/.idea/modules/basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/basics.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/basics.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/basics.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/basics.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/basics.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/basics.app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/inheritance.iml" filepath="$PROJECT_DIR$/.idea/modules/inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/inheritance.lib.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/inheritance.lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/inheritance.lib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/inheritance.lib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lib/inheritance.lib.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lib/inheritance.lib.test.iml" />
+    </modules>
+  </component>
+</project>
