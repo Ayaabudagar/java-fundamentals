@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="basiclibrary.lib" target="16" />
+      <module name="basiclibrary.lib.main" target="16" />
+      <module name="basiclibrary.lib.test" target="16" />
+      <module name="basics.app" target="16" />
+      <module name="basics.app.main" target="16" />
+      <module name="basics.app.test" target="16" />
+      <module name="inheritance.lib" target="16" />
+      <module name="inheritance.lib.main" target="16" />
+      <module name="inheritance.lib.test" target="16" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
