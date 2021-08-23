@@ -8,9 +8,14 @@ public class Library {
         return true;
     }
     public static void main(String[] args){
-        Restaurant newRestaurant = new Restaurant("aya",3);
-        newRestaurant.addReview("heneen" , 7);
+//        Restaurant newRestaurant = new Restaurant("aya",3);
+//        newRestaurant.addReview("heneen" , 7);
+//
+//        System.out.println(newRestaurant);
+        Restaurant r1 =new Restaurant("Restaurant 1",2.5);
+        r1.addReview("aya",5,"good");
+        System.out.println(r1);
 
-        System.out.println(newRestaurant);
+
     }
 }

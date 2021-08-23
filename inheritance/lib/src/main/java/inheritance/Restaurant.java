@@ -13,10 +13,10 @@ public class Restaurant{
         this.name=name;
         this.priceCategory=priceCategory;
     }
-        public void addReview(String author , double starsNum){
-            Review newReview = new Review(author , starsNum);
+        public void addReview(String author , double starsNum,String body){
+            Review newReview = new Review(author , starsNum , body);
             this.reviews.add (newReview);
-            this.counter = this.counter+newReview.getStars();
+            this.counter = this.counter+newReview.getStarsNum();
             this.starsNum=this.counter/this.reviews.size();
 
     }
